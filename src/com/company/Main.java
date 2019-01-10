@@ -98,9 +98,27 @@ public class Main {
             for (int j = 0; j<= 20; j++){
                 for (int i = 0; i<= 3; i++){
                     System.out.print(ch[i]);
-                    sleep(50);
+                    sleep(100);
                     System.out.print("\r");
                 }
+
+            }
+
+            Size size = Size.MEDIUM;
+
+            switch (size){
+                case SMALL:
+                    System.out.println(" Chouse Small");
+                    break;
+                case LARGE:
+                    System.out.println("Chose large");
+                    break;
+                case MEDIUM:
+                    System.out.println("chose MEDIUM");
+                    break;
+                case EXTRA_LARGE:
+                    System.out.println("chose exra large");
+                    break;
             }
     }
 }
