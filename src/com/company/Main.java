@@ -13,7 +13,18 @@ import java.util.EnumMap;
 
 
 public class Main {
+    /**
+     * @author Khvashchevskiy Mikhail
+     * @version 0.0.2
+     * @param args
+     *
+     * Тестируем документирование окода.
+     */
 
+    /**
+     * Это главная функция самого класса чтобы было рабочее простаранство.
+     *
+     */
     public static void main(String[] args)  {
 
         System.out.println("Testing tripleValue:");
@@ -39,6 +50,11 @@ public class Main {
         System.out.println("After: b="+b.getName());
     }
 
+    /**
+     * Процедура прокачки сотрудников, а точнее замены.
+     * @param x Сотрудник один
+     * @param y Сотрудник 2
+     */
     public static void swap(Employee x, Employee y){
         Employee temp = x;
         x = y;

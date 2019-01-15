@@ -2,6 +2,10 @@ package com.company;
 
 import java.time.LocalDate;
 
+/**
+ * @author Khvashchevskih Mikhail
+ * @version 0.0.2
+ */
 public class Employee {
     private String name;
     private double salary;
@@ -11,10 +15,17 @@ public class Employee {
         salary = s;
     }
 
+    /**
+     *
+     * @return Данная функция возвращает имя сотрудника.
+     */
     public String getName(){
         return name;
     }
 
+    /**
+     * @return Данный метод возвращает текущую зарплату сотрудника.
+     */
     public double getSalary(){
         return salary;
     }
