@@ -9,10 +9,12 @@ import java.time.LocalDate;
 public class Employee {
     private String name;
     private double salary;
+    private LocalDate hireDay;
 
-    public Employee(String n, double s){
-        name = n;
-        salary = s;
+    public Employee(String aName, double aSalary, int year, int month, int day){
+        name = aName;
+        salary = aSalary;
+        hireDay = LocalDate.of(year, month, day);
     }
 
     /**
@@ -28,6 +30,14 @@ public class Employee {
      */
     public double getSalary(){
         return salary;
+    }
+
+    /**
+     * Ментод по возврату данных даты приема на работу
+     * @return возвращается дата приема на работу.
+     */
+    public LocalDate getHireDay(){
+        return hireDay;
     }
 
     public void raiseSalary(double byPercent){

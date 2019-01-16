@@ -6,7 +6,7 @@ import java.util.EnumMap;
 
 /**
  * Создал файлы для нового раздела
- * @version 0.0.2 2019-12-01
+ * @version 0.0.2.1 2019-16-01
  * @author Khvashchevskiy Mikhail
  *
  */
@@ -15,7 +15,7 @@ import java.util.EnumMap;
 public class Main {
     /**
      * @author Khvashchevskiy Mikhail
-     * @version 0.0.2
+     * @version 0.0.2.1
      * @param args
      *
      * Тестируем документирование окода.
@@ -27,49 +27,16 @@ public class Main {
      */
     public static void main(String[] args)  {
 
-        System.out.println("Testing tripleValue:");
-        double percent = 10;
-        System.out.println("Before: percent="+percent);
-        tripleValue(percent);
-        System.out.println("After: percent="+percent);
+        Manager boss = new Manager("Carl Cracker", 80000, 1987, 12, 15);
+        boss.setBonus(5000);
 
-        System.out.println("Testing tripleSalary:");
-        Employee harry = new Employee("Harry", 50000);
-        System.out.println("Before: salary="+ harry.getSalary());
-        tripleSalary(harry);
-        System.out.println("After: salary="+harry.getSalary());
+        Employee[] staff = new Employee[3];
+        staff[0] = boss;
+        staff[1] = new Employee("Harry Hacker", 50000, 1989, 10, 1);
+        staff[2] = new Employee("Tommy Tester", 40000, 1990, 3, 15);
 
-        System.out.println("Testing swap:");
-        Employee a = new Employee("Alice", 70000);
-        Employee b = new Employee("Bob", 60000);
-
-        System.out.println("Before: a="+a.getName());
-        System.out.println("Before: b="+b.getName());
-        swap(a, b);
-        System.out.println("After: a="+a.getName());
-        System.out.println("After: b="+b.getName());
+        for (Employee e: staff)
+            System.out.println("Name = "+e.getName() + " , salary = "+ e.getSalary());
     }
 
-    /**
-     * Процедура прокачки сотрудников, а точнее замены.
-     * @param x Сотрудник один
-     * @param y Сотрудник 2
-     */
-    public static void swap(Employee x, Employee y){
-        Employee temp = x;
-        x = y;
-        y = temp;
-        System.out.println(" --> End of method: x="+x.getName());
-        System.out.println(" --> End of method: y="+y.getName());
-    }
-
-    public static void tripleValue(double x){
-        x = 3* x;
-        System.out.println(" --> End of method: x="+x);
-    }
-
-    public static void tripleSalary(Employee x){
-        x.raiseSalary(200);
-        System.out.println(" --> End of method: salary="+x.getSalary());
-    }
 }
