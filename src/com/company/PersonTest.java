@@ -31,5 +31,8 @@ public class PersonTest {
 
         for (Empoyee e: staff)
             System.out.println(e.getName()+"    "+e.getHireDay()+"    "+e.getSalary());
+
+        Size sz = Size.SMALL;
+        sz.getAbb();
     }
 }
