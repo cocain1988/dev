@@ -15,9 +15,26 @@ public class Main {
         Arrays.sort(planets);
         System.out.println(Arrays.toString(planets));
         System.out.println("Sorted by length: ");
+        /**
+         * Именно здесь применяется лямбда выражения
+         */
         Arrays.sort(planets,
                 (first, second) -> first.length() - second.length());
         System.out.println(Arrays.toString(planets));
 
     }
+
+    @Override
+    public int hashCode() {
+        return super.hashCode();
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj);
+
+    }
+
+
+
 }
